@@ -389,6 +389,9 @@ function onMoved()
 function onSmoothPickup()
     pickupItem(getSmoothItemPickupUnit(), getSmoothItemPickupItem())
 
+public function triggerSmoothPickup(unit whichUnit, item whichItem)
+    pickupItem(whichUnit, whichItem)
+
 class SmoothChargesStack implements SmoothPickupPredicate
     override function canPickup(unit whichUnit, item whichItem) returns boolean
         let itemTypeId = whichItem.getTypeId()
